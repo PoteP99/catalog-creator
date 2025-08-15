@@ -104,6 +104,19 @@ button:hover {
   margin-bottom: 1rem;
 }
 
+.page-wrapper {
+  aspect-ratio: 210/297;
+  width: 80%;
+  background-color: white;
+  margin: 20px auto;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.product-card {
+  display: flex;
+}
+
 footer {
   text-align: center;
   padding: 1rem 0;
