@@ -32,6 +32,7 @@ header h1 {
 }
 
 #logo svg {
+  position: absolute;
   margin-left: 10px;
   cursor: pointer;
 }
@@ -104,17 +105,94 @@ button:hover {
   margin-bottom: 1rem;
 }
 
+.page-preview {
+  display: flex;
+  justify-content: center;
+  transform: scale(0.6);
+  transform-origin: top center;
+}
+
 .page-wrapper {
   aspect-ratio: 210/297;
   width: 80%;
   background-color: white;
-  margin: 20px auto;
   border: none;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.page-header {
+  height: 1.5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .product-card {
   display: flex;
+  gap: 0.5rem;
+  margin: 0rem 1rem 0rem 1rem;
+  border-radius: 10px;
+  /*
+  background-color: var(--background-color);
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  */
+  margin-bottom: 1rem;
+}
+
+.product-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.product-details h4 {
+  font-size: 0.6rem;
+  margin-bottom: 0.2rem;
+}
+
+.product-details p {
+  font-size: 0.5rem;
+  color: #444;
+}
+
+.product-details h5 {
+  margin-top: 5px;
+  font-size: 0.4rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.page-footer {
+  padding: 1rem 0;
+}
+
+.page-footer hr {
+  width: 90%;
+  margin: 0 auto 1rem auto;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.page-footer-content {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding-left: 1.5rem;
+  gap: 0.5rem;
+}
+
+.page-footer img {
+  width: 30px;
+  height: 30px;
+}
+
+.page-footer h5 {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 footer {
