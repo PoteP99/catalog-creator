@@ -110,6 +110,8 @@ button:hover {
   justify-content: center;
   transform: scale(0.6);
   transform-origin: top center;
+  position: absolute;
+  overflow: visible;
 }
 
 .page-wrapper {
