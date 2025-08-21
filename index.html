@@ -24,63 +24,70 @@
       </label>
     </header>
     <main>
-      <section>
-        <div id="input-product">
-          <h2>Add Product</h2>
-          <form action="/#" method="post">
-            <fieldset id="product-info-form">
-              <legend>Product Information</legend>
-              <label for="product-name">Product Name</label>
-              <input
-                type="text"
-                id="product-name"
-                placeholder="Product Name"
-                autocomplete="off"
-              />
-              <label for="product-description">Product Description</label>
-              <input
-                type="text"
-                id="product-description"
-                placeholder="Product Description"
-                autocomplete="off"
-              />
-              <label for="product-image">Product Image</label>
-              <input
-                type="file"
-                placeholder="Product Image"
-                id="product-image"
-                accept=".jpg, .jpeg, .png"
-              />
-            </fieldset>
+      <div class="add-edit-products">
+        <section id="add-product">
+          <div id="input-product">
+            <h2>Add Product</h2>
+            <form action="/#" method="post">
+              <fieldset id="product-info-form">
+                <legend>Product Information</legend>
+                <label for="product-name">Product Name</label>
+                <input
+                  type="text"
+                  id="product-name"
+                  placeholder="Product Name"
+                  autocomplete="off"
+                />
+                <label for="product-description">Product Description</label>
+                <input
+                  type="text"
+                  id="product-description"
+                  placeholder="Product Description"
+                  autocomplete="off"
+                />
+                <label for="product-image">Product Image</label>
+                <input
+                  type="file"
+                  placeholder="Product Image"
+                  id="product-image"
+                  accept=".jpg, .jpeg, .png"
+                />
+              </fieldset>
 
-            <fieldset id="variant-form">
-              <legend>Variants</legend>
-              <label for="variant1-name">Variant 1 Title</label>
-              <input
-                type="text"
-                id="variant1-name"
-                placeholder="Variant Title"
-                autocomplete="off"
-              />
-              <label for="variant1-price">Variant 1 Price</label>
-              <input
-                type="number"
-                id="variant1-price"
-                placeholder="Variant Price"
-                autocomplete="off"
-              />
-              <button type="button" id="add-variant-btn">Add Variant</button>
-            </fieldset>
-            <button type="button" id="add-product-btn">Add Product</button>
-          </form>
-        </div>
-      </section>
-      <section>
+              <fieldset id="variant-form">
+                <legend>Variants</legend>
+                <label for="variant1-name">Variant 1 Title</label>
+                <input
+                  type="text"
+                  id="variant1-name"
+                  placeholder="Variant Title"
+                  autocomplete="off"
+                />
+                <label for="variant1-price">Variant 1 Price</label>
+                <input
+                  type="number"
+                  id="variant1-price"
+                  placeholder="Variant Price"
+                  autocomplete="off"
+                />
+                <button type="button" id="add-variant-btn">Add Variant</button>
+              </fieldset>
+              <button type="button" id="add-product-btn">Add Product</button>
+            </form>
+          </div>
+        </section>
+        <section id="list-section">
+          <h2>Product List</h2>
+        </section>
+      </div>
+      <section id="preview">
         <div id="catalog-preview">
           <h2>Preview</h2>
+          <!--
           <div class="page-preview">
             <div class="page-wrapper">
               <div class="page-header"></div>
+              
               <div class="product-grid">
                 <div class="product-card">
                   <img
@@ -304,6 +311,7 @@
                   </div>
                 </div>
               </div>
+              
               <div class="page-footer">
                 <hr />
                 <div class="page-footer-content">
@@ -318,6 +326,7 @@
               </div>
             </div>
           </div>
+          -->
           <button type="button" id="export-btn">Export PDF</button>
         </div>
       </section>
