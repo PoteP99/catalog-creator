@@ -13,7 +13,7 @@
         <svg
           xmlns="http://www.w3.org/2000/svg"
           height="32px"
-          viewBox="0 -960 960 960"
+          viewBox="0 -1100 960 960"
           width="32px"
           fill="#1f1f1f"
         >
@@ -24,312 +24,318 @@
       </label>
     </header>
     <main>
-      <div class="add-edit-products">
-        <section id="add-product">
-          <div id="input-product">
-            <h2>Add Product</h2>
-            <form action="/#" method="post">
-              <fieldset id="product-info-form">
-                <legend>Product Information</legend>
-                <label for="product-name">Product Name</label>
-                <input
-                  type="text"
-                  id="product-name"
-                  placeholder="Product Name"
-                  autocomplete="off"
-                />
-                <label for="product-description">Product Description</label>
-                <input
-                  type="text"
-                  id="product-description"
-                  placeholder="Product Description"
-                  autocomplete="off"
-                />
-                <label for="product-image">Product Image</label>
-                <input
-                  type="file"
-                  placeholder="Product Image"
-                  id="product-image"
-                  accept=".jpg, .jpeg, .png"
-                />
-              </fieldset>
-
-              <fieldset id="variant-form">
-                <legend>Variants</legend>
-                <label for="variant1-name">Variant 1 Title</label>
-                <input
-                  type="text"
-                  id="variant1-name"
-                  placeholder="Variant Title"
-                  autocomplete="off"
-                />
-                <label for="variant1-price">Variant 1 Price</label>
-                <input
-                  type="number"
-                  id="variant1-price"
-                  placeholder="Variant Price"
-                  autocomplete="off"
-                />
-                <button type="button" id="add-variant-btn">Add Variant</button>
-              </fieldset>
-              <button type="button" id="add-product-btn">Add Product</button>
-            </form>
+      <div class="container">
+        <section id="product-section">
+          <div class="section-header">
+            <h2>Product List</h2>
+            <button
+              type="button"
+              placeholder="Add Product"
+              id="add-product-btn"
+            >
+              Add Product
+            </button>
+          </div>
+          <div id="product-list">
+            <ul>
+              <li class="product-item">
+                <div class="drag-indicator">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#1f1f1f"
+                  >
+                    <path
+                      d="M360-160q-33 0-56.5-23.5T280-240q0-33 23.5-56.5T360-320q33 0 56.5 23.5T440-240q0 33-23.5 56.5T360-160Zm240 0q-33 0-56.5-23.5T520-240q0-33 23.5-56.5T600-320q33 0 56.5 23.5T680-240q0 33-23.5 56.5T600-160ZM360-400q-33 0-56.5-23.5T280-480q0-33 23.5-56.5T360-560q33 0 56.5 23.5T440-480q0 33-23.5 56.5T360-400Zm240 0q-33 0-56.5-23.5T520-480q0-33 23.5-56.5T600-560q33 0 56.5 23.5T680-480q0 33-23.5 56.5T600-400ZM360-640q-33 0-56.5-23.5T280-720q0-33 23.5-56.5T360-800q33 0 56.5 23.5T440-720q0 33-23.5 56.5T360-640Zm240 0q-33 0-56.5-23.5T520-720q0-33 23.5-56.5T600-800q33 0 56.5 23.5T680-720q0 33-23.5 56.5T600-640Z"
+                    />
+                  </svg>
+                </div>
+                <div class="product-photo">
+                  <img
+                    src="data/bacon-premium-smoked-english-style-back-bacon copy.jpg"
+                    alt="Sample Photo"
+                  />
+                </div>
+                <div class="product-info">
+                  <div class="product-main">
+                    <h3>Back Bacon</h3>
+                    <p>Premium wood-smoked English-style</p>
+                  </div>
+                  <div class="product-variants">
+                    <span class="variant-title">250 g</span>
+                    <span class="variant-price">120 thb</span>
+                  </div>
+                </div>
+                <div class="delete-btn">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    viewBox="0 -960 960 960"
+                    width="24px"
+                    fill="#1f1f1f"
+                  >
+                    <path
+                      d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+                    />
+                  </svg>
+                </div>
+              </li>
+            </ul>
           </div>
         </section>
-        <section id="list-section">
-          <h2>Product List</h2>
-        </section>
-      </div>
-      <section id="preview">
-        <div id="catalog-preview">
-          <h2>Preview</h2>
-          <!--
-          <div class="page-preview">
-            <div class="page-wrapper">
-              <div class="page-header"></div>
-              
-              <div class="product-grid">
-                <div class="product-card">
-                  <img
-                    src="data/bacon-premium-smoked-english-style-back-bacon copy.jpg"
-                    alt="Back Bacon"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Back Bacon</h4>
-                    <p>Premium wood-smoked English-style</p>
-                    <h5>Packaging/Size</h5>
-                    <p>250g, 500g, 1kg</p>
-                    <h5>Price</h5>
-                    <p>120, 210, 380 thb</p>
+        <section id="preview">
+          <div id="catalog-preview">
+            <div class="section-header">
+              <h2>Preview</h2>
+              <button type="button" id="export-btn">Export PDF</button>
+            </div>
+            <div class="page-preview">
+              <div class="page-wrapper">
+                <div class="page-header"></div>
+
+                <div class="product-grid">
+                  <div class="product-card">
+                    <img
+                      src="data/bacon-premium-smoked-english-style-back-bacon copy.jpg"
+                      alt="Back Bacon"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Back Bacon</h4>
+                      <p>Premium wood-smoked English-style</p>
+                      <h5>Packaging/Size</h5>
+                      <p>250g, 500g, 1kg</p>
+                      <h5>Price</h5>
+                      <p>120, 210, 380 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/bacon-premium-smoked-american-style copy.jpg"
+                      alt="Smoked Bacon"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Streaky Bacon</h4>
+                      <p>Premium Wood-smoked American-style Belly Bacon</p>
+                      <h5>Packaging/Size</h5>
+                      <p>250g, 500g, 1kg</p>
+                      <h5>Price</h5>
+                      <p>120, 200, 380 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/bacon-premium-smoked-english-&-american-style-mixed-trimmings copy.jpg"
+                      alt="Bacon Trimmings"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Bacon Trimmings</h4>
+                      <p>
+                        *Subject to availability | Mixed sized Streaky Bacon
+                        trimmings
+                      </p>
+                      <h5>Packaging/Size</h5>
+                      <p>1kg</p>
+                      <h5>Price</h5>
+                      <p>240thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/ham-half copy.jpg"
+                      alt="Baked Whole Ham"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Baked Whole Ham</h4>
+                      <p>
+                        *Requires 8 day lead time. Delivered fresh. 4-5kg
+                        Catering Size.
+                      </p>
+                      <h5>Packaging/Size</h5>
+                      <p>Whole Piece</p>
+                      <h5>Price</h5>
+                      <p>360thb/kg</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/Pork Chop CMG copy.jpg"
+                      alt="Pork Chop"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Pork Chop</h4>
+                      <p>Farm Direct Thick Cut Pork Chop</p>
+                      <h5>Packaging/Size</h5>
+                      <p>400g</p>
+                      <h5>Price</h5>
+                      <p>149 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/Aus-Beef Burger copy.jpg"
+                      alt="Australian Beef Burger"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Australian Beef Burger</h4>
+                      <p>
+                        100% Pasture raised, Grass fed, Australian ground Angus
+                        Chuck Beef
+                      </p>
+                      <h5>Packaging/Size</h5>
+                      <p>6 Patties</p>
+                      <h5>Price</h5>
+                      <p>390 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/bacon-premium-smoked-english-style-back-bacon copy.jpg"
+                      alt="Back Bacon"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Back Bacon</h4>
+                      <p>Premium wood-smoked English-style</p>
+                      <h5>Packaging/Size</h5>
+                      <p>250g, 500g, 1kg</p>
+                      <h5>Price</h5>
+                      <p>120, 210, 380 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/bacon-premium-smoked-american-style copy.jpg"
+                      alt="Smoked Bacon"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Streaky Bacon</h4>
+                      <p>Premium Wood-smoked American-style Belly Bacon</p>
+                      <h5>Packaging/Size</h5>
+                      <p>250g, 500g, 1kg</p>
+                      <h5>Price</h5>
+                      <p>120, 200, 380 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/bacon-premium-smoked-english-&-american-style-mixed-trimmings copy.jpg"
+                      alt="Bacon Trimmings"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Bacon Trimmings</h4>
+                      <p>
+                        *Subject to availability | Mixed sized Streaky Bacon
+                        trimmings
+                      </p>
+                      <h5>Packaging/Size</h5>
+                      <p>1kg</p>
+                      <h5>Price</h5>
+                      <p>240thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/ham-half copy.jpg"
+                      alt="Baked Whole Ham"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Baked Whole Ham</h4>
+                      <p>
+                        *Requires 8 day lead time. Delivered fresh. 4-5kg
+                        Catering Size.
+                      </p>
+                      <h5>Packaging/Size</h5>
+                      <p>Whole Piece</p>
+                      <h5>Price</h5>
+                      <p>360thb/kg</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/Pork Chop CMG copy.jpg"
+                      alt="Pork Chop"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Pork Chop</h4>
+                      <p>Farm Direct Thick Cut Pork Chop</p>
+                      <h5>Packaging/Size</h5>
+                      <p>400g</p>
+                      <h5>Price</h5>
+                      <p>149 thb</p>
+                    </div>
+                  </div>
+
+                  <div class="product-card">
+                    <img
+                      src="data/Aus-Beef Burger copy.jpg"
+                      alt="Australian Beef Burger"
+                      width="200"
+                      height="200"
+                    />
+                    <div class="product-details">
+                      <h4>Australian Beef Burger</h4>
+                      <p>
+                        100% Pasture raised, Grass fed, Australian ground Angus
+                        Chuck Beef
+                      </p>
+                      <h5>Packaging/Size</h5>
+                      <p>6 Patties</p>
+                      <h5>Price</h5>
+                      <p>390 thb</p>
+                    </div>
                   </div>
                 </div>
 
-                <div class="product-card">
-                  <img
-                    src="data/bacon-premium-smoked-american-style copy.jpg"
-                    alt="Smoked Bacon"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Streaky Bacon</h4>
-                    <p>Premium Wood-smoked American-style Belly Bacon</p>
-                    <h5>Packaging/Size</h5>
-                    <p>250g, 500g, 1kg</p>
-                    <h5>Price</h5>
-                    <p>120, 200, 380 thb</p>
+                <div class="page-footer">
+                  <hr />
+                  <div class="page-footer-content">
+                    <img
+                      src="assets/CMG Logo copy.jpg"
+                      alt="CMG Logo"
+                      width="30"
+                      height="30"
+                    />
+                    <h5>Chiang Mai Gourmet</h5>
                   </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/bacon-premium-smoked-english-&-american-style-mixed-trimmings copy.jpg"
-                    alt="Bacon Trimmings"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Bacon Trimmings</h4>
-                    <p>
-                      *Subject to availability | Mixed sized Streaky Bacon
-                      trimmings
-                    </p>
-                    <h5>Packaging/Size</h5>
-                    <p>1kg</p>
-                    <h5>Price</h5>
-                    <p>240thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/ham-half copy.jpg"
-                    alt="Baked Whole Ham"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Baked Whole Ham</h4>
-                    <p>
-                      *Requires 8 day lead time. Delivered fresh. 4-5kg Catering
-                      Size.
-                    </p>
-                    <h5>Packaging/Size</h5>
-                    <p>Whole Piece</p>
-                    <h5>Price</h5>
-                    <p>360thb/kg</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/Pork Chop CMG copy.jpg"
-                    alt="Pork Chop"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Pork Chop</h4>
-                    <p>Farm Direct Thick Cut Pork Chop</p>
-                    <h5>Packaging/Size</h5>
-                    <p>400g</p>
-                    <h5>Price</h5>
-                    <p>149 thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/Aus-Beef Burger copy.jpg"
-                    alt="Australian Beef Burger"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Australian Beef Burger</h4>
-                    <p>
-                      100% Pasture raised, Grass fed, Australian ground Angus
-                      Chuck Beef
-                    </p>
-                    <h5>Packaging/Size</h5>
-                    <p>6 Patties</p>
-                    <h5>Price</h5>
-                    <p>390 thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/bacon-premium-smoked-english-style-back-bacon copy.jpg"
-                    alt="Back Bacon"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Back Bacon</h4>
-                    <p>Premium wood-smoked English-style</p>
-                    <h5>Packaging/Size</h5>
-                    <p>250g, 500g, 1kg</p>
-                    <h5>Price</h5>
-                    <p>120, 210, 380 thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/bacon-premium-smoked-american-style copy.jpg"
-                    alt="Smoked Bacon"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Streaky Bacon</h4>
-                    <p>Premium Wood-smoked American-style Belly Bacon</p>
-                    <h5>Packaging/Size</h5>
-                    <p>250g, 500g, 1kg</p>
-                    <h5>Price</h5>
-                    <p>120, 200, 380 thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/bacon-premium-smoked-english-&-american-style-mixed-trimmings copy.jpg"
-                    alt="Bacon Trimmings"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Bacon Trimmings</h4>
-                    <p>
-                      *Subject to availability | Mixed sized Streaky Bacon
-                      trimmings
-                    </p>
-                    <h5>Packaging/Size</h5>
-                    <p>1kg</p>
-                    <h5>Price</h5>
-                    <p>240thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/ham-half copy.jpg"
-                    alt="Baked Whole Ham"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Baked Whole Ham</h4>
-                    <p>
-                      *Requires 8 day lead time. Delivered fresh. 4-5kg Catering
-                      Size.
-                    </p>
-                    <h5>Packaging/Size</h5>
-                    <p>Whole Piece</p>
-                    <h5>Price</h5>
-                    <p>360thb/kg</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/Pork Chop CMG copy.jpg"
-                    alt="Pork Chop"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Pork Chop</h4>
-                    <p>Farm Direct Thick Cut Pork Chop</p>
-                    <h5>Packaging/Size</h5>
-                    <p>400g</p>
-                    <h5>Price</h5>
-                    <p>149 thb</p>
-                  </div>
-                </div>
-
-                <div class="product-card">
-                  <img
-                    src="data/Aus-Beef Burger copy.jpg"
-                    alt="Australian Beef Burger"
-                    width="200"
-                    height="200"
-                  />
-                  <div class="product-details">
-                    <h4>Australian Beef Burger</h4>
-                    <p>
-                      100% Pasture raised, Grass fed, Australian ground Angus
-                      Chuck Beef
-                    </p>
-                    <h5>Packaging/Size</h5>
-                    <p>6 Patties</p>
-                    <h5>Price</h5>
-                    <p>390 thb</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="page-footer">
-                <hr />
-                <div class="page-footer-content">
-                  <img
-                    src="assets/CMG Logo copy.jpg"
-                    alt="CMG Logo"
-                    width="30"
-                    height="30"
-                  />
-                  <h5>Chiang Mai Gourmet</h5>
                 </div>
               </div>
             </div>
           </div>
-          -->
-          <button type="button" id="export-btn">Export PDF</button>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
     <footer>
       <p>&copy; Catalog Creator Project by Pote Prathumma</p>
